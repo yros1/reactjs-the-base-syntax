@@ -13,7 +13,15 @@ class App extends Component {
     otherState : 'some other value'
   }
 
-
+  switchUserNameHandler = (userName) => {
+    this.setState({
+      userOutput: [
+        { username: userName, genre: 'FPS' },
+        { username: 'Green', genre: 'Sport' },
+        { username: 'Red', genre: 'MMO'}
+      ] 
+    })
+  }
 
   render() {
     return (
