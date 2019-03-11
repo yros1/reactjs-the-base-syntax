@@ -23,10 +23,22 @@ class App extends Component {
     })
   }
 
+  usernameChangedHandler = (event) => {
+    this.setState({
+      userOutput: [
+        { username: 'Pink', genre: 'FPS' },
+        { username: event.target.value, genre: 'Sport' },
+        { username: 'Red', genre: 'MMO'}
+      ] 
+    })
+  }
   render() {
     return (
       <div className="App">
         <p>App main component.</p>
+        <UserInput changed={this.usernameChangedHandler}>input component</UserInput>
+
+
         <UserOutput username={this.state.userOutput[0].username} 
                     genre={this.state.userOutput[0].genre} />
         <UserOutput username={this.state.userOutput[1].username} 
