@@ -7,7 +7,8 @@ const userInput = (props) => {
     return(
         <div className="UserInput">
             <p>User Name is {props.username}</p>
-            <input type="text" 
+            <input id="inputTagUserInputStype" 
+                   type="text" 
                    onChange={props.changed}
                    value={props.username}/>
         </div>
