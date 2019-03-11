@@ -49,7 +49,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <p>App main component.</p>
         <UserInput username={this.state.userOutput[1].username} 
                    changed={this.usernameChangedHandler}>input component</UserInput>
         <UserOutput username={this.state.userOutput[0].username} 
